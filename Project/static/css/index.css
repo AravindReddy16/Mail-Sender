@@ -1,0 +1,452 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+@media (width >= 600px) {
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+    .navbar {
+        width: 100%;
+        height: 8%;
+        background-color: rgb(67, 67, 238);
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        color: white;
+        border-bottom: 5px solid white;
+    }
+    .mainbody {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(67, 67, 238);
+        position: relative;
+    }
+    .form {
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        overflow: auto;
+        padding: 20px 40px;
+    }
+    .form::-webkit-scrollbar {
+        display: none;
+    }
+    .info {
+        width: 50%;
+        height: 100%;
+        background-color: rgba(255, 255, 255,0.9);
+        overflow: auto;
+        padding: 20px 40px;
+        position: absolute;
+        display: none;
+    }
+    .info::-webkit-scrollbar {
+        display: none;
+    }
+    .close {
+        width: 100%;
+        height: 8%;
+        display: flex;
+        justify-content: end;
+        font-size: 30px;
+    }
+    .close i {
+        cursor: pointer;
+        color: red;
+    }
+    .content {
+        width: 100%;
+        min-height: 92%;
+    }
+    .content p {
+        margin-bottom: 20px;
+        color: red;
+    }
+    .content img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input {
+        width: 100%;
+        height: 100px;
+    }
+    .input .text {
+        width: 100%;
+        height: 30%;
+    }
+    .input .text b {
+        cursor: pointer;
+        color: blue;
+    }
+    .input .field {
+        width: 100%;
+        height: 70%;
+    }
+    .input input[type=text] {
+        width: 100%;
+        height: 65%;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .to {
+        width: 100%;
+        height: 250px;
+    }
+    .to .text {
+        width: 100%;
+        height: 35px;
+    }
+    .to .field {
+        width: 100%;
+        height: 215px;
+    }
+    .to textarea {
+        width: 100%;
+        height: 90%;
+        resize: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .subject {
+        width: 100%;
+        height: 250px;
+    }
+    .subject .text {
+        width: 100%;
+        height: 35px;
+    }
+    .subject .field {
+        width: 100%;
+        height: 215px;
+    }
+    .subject textarea {
+        width: 100%;
+        height: 90%;
+        resize: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .body {
+        width: 100%;
+        height: 400px;
+    }
+    .body .text {
+        width: 100%;
+        height: 35px;
+    }
+    .body .field {
+        width: 100%;
+        height: 365px;
+    }
+    .body textarea {
+        width: 100%;
+        height: 93%;
+        resize: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .text p {
+        color: red;
+    }
+    .button {
+        width: 100%;
+        height: 45px;
+    }
+    button {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: rgb(67, 67, 238);
+        color: white;
+        font-size: 25px;
+        border: none;
+    }
+    .footer {
+        width: 100%;
+        height: 7%;
+        background-color: rgb(67, 67, 238);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: white;
+        border-top: 5px solid white;
+    }
+    .loading {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(240, 248, 255,0.8);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .load-div {
+        width: 200px;
+        height: 250px;
+    }
+    .load-text {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-size: 27px;
+        color: red;
+    }
+    .loader {
+        width: 200px;
+        height: 200px;
+        border: 10px solid rgb(67, 67, 238);
+        border-radius: 50%;
+        border-top-color: silver;
+        border-bottom-color: silver;
+        animation: load 1s ease-in infinite;
+    }
+    @keyframes load {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+@media (width <= 600px) {
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+    .navbar {
+        width: 100%;
+        height: 8%;
+        background-color: rgb(67, 67, 238);
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        color: white;
+        border-bottom: 5px solid white;
+    }
+    .mainbody {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(67, 67, 238);
+        position: relative;
+    }
+    .form {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        overflow: auto;
+        padding: 10px 10px;
+    }
+    .form::-webkit-scrollbar {
+        display: none;
+    }
+    .info {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255,0.9);
+        overflow: auto;
+        padding: 10px 10px;
+        position: absolute;
+        display: none;
+    }
+    .info::-webkit-scrollbar {
+        display: none;
+    }
+    .close {
+        width: 100%;
+        height: 8%;
+        display: flex;
+        justify-content: end;
+        font-size: 30px;
+    }
+    .close i {
+        cursor: pointer;
+        color: red;
+    }
+    .content {
+        width: 100%;
+        min-height: 92%;
+    }
+    .content p {
+        margin-bottom: 20px;
+        color: red;
+    }
+    .content img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input {
+        width: 100%;
+        height: 150px;
+    }
+    .input .text {
+        width: 100%;
+        height: 30%;
+    }
+    .input .text b {
+        cursor: pointer;
+        color: blue;
+    }
+    .input .field {
+        width: 100%;
+        height: 70%;
+    }
+    .input input[type=text] {
+        width: 100%;
+        height: 45%;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .to {
+        width: 100%;
+        height: 250px;
+    }
+    .to .text {
+        width: 100%;
+        height: 45px;
+    }
+    .to .field {
+        width: 100%;
+        height: 215px;
+    }
+    .to textarea {
+        width: 100%;
+        height: 90%;
+        resize: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .subject {
+        width: 100%;
+        height: 250px;
+    }
+    .subject .text {
+        width: 100%;
+        height: 35px;
+    }
+    .subject .field {
+        width: 100%;
+        height: 215px;
+    }
+    .subject textarea {
+        width: 100%;
+        height: 90%;
+        resize: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .body {
+        width: 100%;
+        height: 400px;
+    }
+    .body .text {
+        width: 100%;
+        height: 35px;
+    }
+    .body .field {
+        width: 100%;
+        height: 365px;
+    }
+    .body textarea {
+        width: 100%;
+        height: 93%;
+        resize: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .text p {
+        color: red;
+    }
+    .button {
+        width: 100%;
+        height: 45px;
+    }
+    button {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: rgb(67, 67, 238);
+        color: white;
+        font-size: 25px;
+        border: none;
+    }
+    .footer {
+        width: 100%;
+        height: 7%;
+        background-color: rgb(67, 67, 238);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: white;
+        border-top: 5px solid white;
+    }
+    .loading {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(240, 248, 255,0.8);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .load-div {
+        width: 100px;
+        height: 150px;
+    }
+    .load-text {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-size: 18px;
+        color: red;
+    }
+    .loader {
+        width: 100px;
+        height: 100px;
+        border: 10px solid rgb(67, 67, 238);
+        border-radius: 50%;
+        border-top-color: silver;
+        border-bottom-color: silver;
+        animation: load 1s ease-in infinite;
+    }
+    @keyframes load {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

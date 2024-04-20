@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>MailSender</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="navbar">
+                <marquee behavior="scroll" direction="left" scrollamount="15">Send Mails through MailSender without any Account !...</marquee>
+            </div>
+            <div class="mainbody">
+                <form action="" method="post" enctype="multipart/form-data" class="form">
+                    {% csrf_token %}
+                    <div class="input">
+                        <div class="text">
+                            <p>* Must required your email address</p>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="from" placeholder="From" required>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div class="text">
+                            <p>* Must required your email app password. For more <b class="open">click</b></p>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="passkey" placeholder="App Password" required>
+                        </div>
+                    </div>
+                    <div class="to">
+                        <div class="text">
+                            <p>* Must required recipitent email addresses. If more addresses seperate them with comma(,)</p>
+                        </div>
+                        <div class="field">
+                            <textarea name="to" cols="30" rows="5" placeholder="To" required></textarea>
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <div class="text">
+                            <p>* Must required subject for mail</p>
+                        </div>
+                        <div class="field">
+                            <textarea name="subject" cols="30" rows="5" placeholder="Subject" required></textarea>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="text">
+                            <p>* Must required body for mail</p>
+                        </div>
+                        <div class="field">
+                            <textarea name="body" cols="30" rows="20" placeholder="Body" required></textarea>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div class="text">
+                            <p>* Choice to attach file for mail</p>
+                        </div>
+                        <div class="field">
+                            <input type="file" name="file" placeholder="File">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Ready to Send</button>
+                    </div>
+                </form>
+                <div class="info">
+                    <div class="close">
+                        <i class="fa-sharp fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="content">
+                        <p>* Follow Steps to get App Password of your E-Mail Address</p>
+                        <img src="{% static 'images/step-1.png' %}" alt="steps">
+                        <img src="{% static 'images/step-2.png' %}" alt="steps">
+                        <img src="{% static 'images/step-3.png' %}" alt="steps">
+                        <img src="{% static 'images/step-4.png' %}" alt="steps">
+                        <img src="{% static 'images/step-5.png' %}" alt="steps">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>©️ All Rights Reserved | MailSender 2024</p>
+            </div>
+        </div>
+        <div class="loading">
+            <div class="load-div">
+                <div class="loader"></div>
+                <div class="load-text">
+                    <p>Please Wait...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
